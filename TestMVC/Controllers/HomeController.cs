@@ -29,3 +29,11 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
+//appsetting.json
+//"ConnectionStrings": {
+//"DefaultConnection": "Data Source=App.db; Cache=Shared"
+//}
+//program.cs
+//builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") 
+//?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found."))); 
+//dotnet aspnet-codegenerator controller -name YourController -m YourModel -dc YourNamespce.ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
